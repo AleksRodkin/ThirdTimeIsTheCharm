@@ -15,8 +15,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordLabel: UILabel!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBAction func loginButton(_ sender: Any) {
-        print(userNameTextField.text)
-        print(passwordTextField.text)
     
     }
     
