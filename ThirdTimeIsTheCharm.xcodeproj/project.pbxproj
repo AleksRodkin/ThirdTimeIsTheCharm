@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		77AA4593276E9AB00086672C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AA4592276E9AB00086672C /* AppDelegate.swift */; };
 		77AA4595276E9AB00086672C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AA4594276E9AB00086672C /* SceneDelegate.swift */; };
-		77AA4597276E9AB00086672C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AA4596276E9AB00086672C /* ViewController.swift */; };
+		77AA4597276E9AB00086672C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AA4596276E9AB00086672C /* LoginViewController.swift */; };
 		77AA459A276E9AB00086672C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77AA4598276E9AB00086672C /* Main.storyboard */; };
 		77AA459C276E9AB20086672C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77AA459B276E9AB20086672C /* Assets.xcassets */; };
 		77AA459F276E9AB20086672C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77AA459D276E9AB20086672C /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		77AA458F276E9AB00086672C /* ThirdTimeIsTheCharm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThirdTimeIsTheCharm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77AA4592276E9AB00086672C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77AA4594276E9AB00086672C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		77AA4596276E9AB00086672C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		77AA4596276E9AB00086672C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		77AA4599276E9AB00086672C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		77AA459B276E9AB20086672C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77AA459E276E9AB20086672C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,15 +56,31 @@
 		77AA4591276E9AB00086672C /* ThirdTimeIsTheCharm */ = {
 			isa = PBXGroup;
 			children = (
-				77AA4592276E9AB00086672C /* AppDelegate.swift */,
-				77AA4594276E9AB00086672C /* SceneDelegate.swift */,
-				77AA4596276E9AB00086672C /* ViewController.swift */,
 				77AA4598276E9AB00086672C /* Main.storyboard */,
+				77AA45A7276E9EAC0086672C /* Views */,
+				77AA45A6276E9E7B0086672C /* Source */,
 				77AA459B276E9AB20086672C /* Assets.xcassets */,
-				77AA459D276E9AB20086672C /* LaunchScreen.storyboard */,
 				77AA45A0276E9AB20086672C /* Info.plist */,
 			);
 			path = ThirdTimeIsTheCharm;
+			sourceTree = "<group>";
+		};
+		77AA45A6276E9E7B0086672C /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				77AA459D276E9AB20086672C /* LaunchScreen.storyboard */,
+				77AA4594276E9AB00086672C /* SceneDelegate.swift */,
+				77AA4592276E9AB00086672C /* AppDelegate.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		77AA45A7276E9EAC0086672C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				77AA4596276E9AB00086672C /* LoginViewController.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77AA4597276E9AB00086672C /* ViewController.swift in Sources */,
+				77AA4597276E9AB00086672C /* LoginViewController.swift in Sources */,
 				77AA4593276E9AB00086672C /* AppDelegate.swift in Sources */,
 				77AA4595276E9AB00086672C /* SceneDelegate.swift in Sources */,
 			);
