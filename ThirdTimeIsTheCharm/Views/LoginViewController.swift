@@ -17,7 +17,9 @@ class LoginViewController: UIViewController {
     @IBAction func loginButton(_ sender: Any) {
         print(userNameTextField.text)
         print(passwordTextField.text)
-    
+    }
+    @IBAction func myUnwindAction(unwindSegue: UIStoryboardSegue) {
+        navigationController?.popToRootViewController(animated: true)
     }
     
     override func viewDidLoad() {
@@ -96,6 +98,44 @@ class LoginViewController: UIViewController {
     
     @objc func hideKeyboard() {
         self.scrollView?.endEditing(true)
+    }
+    
+    
+    private func showErrorAlert(message: String) {
+        let alert = UIAlertController(title: "Ошибка", message: message, preferredStyle: .alert)
+        
+        let action = UIAlertAction(title: "OK", style: .cancel) {_ in
+                self.passwordTextField.text = ""
+        }
+        
+        alert.addAction(action)
+        present(alert, animated: true)
+    }
+    
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        
+        if identifier == "moveToMain" {
+            guard
+                let login = userNameTextField.text,
+                let password = passwordTextField.text
+            else {
+                print("Значения не введены")
+                showErrorAlert(message: "Поля не заполнены")
+                return false
+            }
+            
+            if login == "1" && password == "1" {
+                print("Успех")
+                return true
+            } else {
+                showErrorAlert(message: "Неверный логин или пароль")
+                print("Dir. by Robert B. Weide")
+                return false
+            }
+        }
+        showErrorAlert(message: "Неверный identifier у segue")
+        return false
     }
     
     
